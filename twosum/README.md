@@ -11,6 +11,9 @@
 2. 修改新的挺简单，想了几分钟，使用一个负数记录表，一个正数记录表，发现被占后，判断正负记录表，原位置和与目标和的差位置是否有所求结果，顺利一遍通过。
 3. 第一题就打败了97.85%的人（感觉最前面的5%都在一起，说不定是运行速度问题的差别，嘻嘻），而且就是在线编程，没有使用ide，给我很多信心！
 
+###版本3
+妄想以舍弃vector, 手动开辟内存空间的办法来加速，结果排名丝毫未变，好想知道比我快的人是用了什么更屌（奇技淫巧！）的优化方式。
+
 [id]:https://raw.githubusercontent.com/YinWenAtBIT/MarkDown_Pic/master/Leetcod_pic/two_sum_version2.jpg "打败97.85的对手"
 
 ![Alt text](https://raw.githubusercontent.com/YinWenAtBIT/MarkDown_Pic/master/Leetcod_pic/two_sum_version2.jpg "打败97.85的对手")
