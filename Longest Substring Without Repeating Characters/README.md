@@ -10,5 +10,5 @@
 1. 既然要用hash，肯定有化简的办法，在纸上模拟了几下，发下记录一个字符上一次出现位置，同时记录一个上一次统计长度开始位置（代码里写的laststop），就可以通过一遍遍历得到最长子串，简单修改一下，就成功了，耗时16ms，打败了64.54%。前面只有8%的人用时12ms。感觉找不到优化的地方了，不知道是不是又是运气问题。
 
 
-![Alt text](https://github.com/YinWenAtBIT/MarkDown_Pic/blob/master/Leetcod_pic/longest_Substring_Without_Repeating_Characters_1.jpg"打败64.54%的对手")
+![Alt text](https://github.com/YinWenAtBIT/MarkDown_Pic/blob/master/Leetcod_pic/longest_Substring_Without_Repeating_Characters_1.jpg "打败64.54%的对手")
 

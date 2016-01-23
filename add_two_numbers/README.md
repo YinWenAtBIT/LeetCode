@@ -17,4 +17,4 @@
 ###python版本1：
 完全的C++版本算法移植，第一遍148ms，打败44%，我打算超过50%就算了，于是再跑了一遍，结果打败了93.68%，果然运行时间太不靠谱了。。
 
-![Alt text](https://raw.githubusercontent.com/YinWenAtBIT/MarkDown_Pic/master/Leetcod_pic/add_two_numbers_py.jpg"打败93.68的对手")
+![Alt text](https://raw.githubusercontent.com/YinWenAtBIT/MarkDown_Pic/master/Leetcod_pic/add_two_numbers_py.jpg "打败93.68的对手")
