@@ -12,3 +12,8 @@
 
 ![Alt text](https://github.com/YinWenAtBIT/MarkDown_Pic/blob/master/Leetcod_pic/longest_Substring_Without_Repeating_Characters_1.jpg "打败64.54%的对手")
 
+
+###python版本1：
+这个版本完全移植了C++版本的算法，跑了两次，打败86.59%，已经满意了。
+
+![Alt text](https://github.com/YinWenAtBIT/MarkDown_Pic/blob/master/Leetcod_pic/longest_Substring_Without_Repeating_Characters_py.jpg "打败86.59%的对手")
