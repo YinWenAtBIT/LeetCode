@@ -18,6 +18,9 @@
 
 ![Alt text](https://raw.githubusercontent.com/YinWenAtBIT/MarkDown_Pic/master/Leetcod_pic/two_sum_version2.jpg "打败97.85的对手")
 
+###版本4
+查看了别人的代码，发现使用字典，就可以完全避免出现负数的索引，虽然速度不如我使用第二个版本，但是编码简单非常多。
+
 ###python版本1：
 这个版本完全移植了C++版本的算法，可惜由于对于python一直是用的时候学习，对于如何写出高性能的python代码并不懂，结果落在了最高峰处，只打败了50%多的人
 
