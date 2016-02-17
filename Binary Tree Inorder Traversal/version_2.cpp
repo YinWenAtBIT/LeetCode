@@ -21,12 +21,12 @@ public:
         {
             while(now)
             {
+				res.push_back(now->val);
                 st.push(now);
                 now = now->left;
             }
             TreeNode * read = st.top();
             st.pop();
-            res.push_back(read->val);
             now = read ->right;
         }
         
