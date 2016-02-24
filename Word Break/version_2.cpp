@@ -1,44 +1,35 @@
-/**
- * Definition for singly-linked list with a random pointer.
- * struct RandomListNode {
- *     int label;
- *     RandomListNode *next, *random;
- *     RandomListNode(int x) : label(x), next(NULL), random(NULL) {}
- * };
- */
 class Solution {
 public:
-    RandomListNode *copyRandomList(RandomListNode *head) {
-        if(!head)
-            return NULL;
-        RandomListNode *now = head;
-        unordered_map<RandomListNode *, RandomListNode*> dic;
-        RandomListNode *new_head = new RandomListNode(now->label);
-        RandomListNode * new_one = new_head;
-        dic[head] = new_head;
-        while(now->next)
+    bool wordBreak(string s, unordered_set<string>& wordDict) {
+        int len = s.size();
+        if(!len)
+            return false;
+        vector<bool> dp(len+1, false);
+        dp[0] = true;
+        int min_len = 0;
+        for(auto it = wordDict.begin(); it != wordDict.end(); it++)
         {
-            now = now->next;
-            new_one ->next = new RandomListNode(now->label);
-            new_one = new_one ->next;
-            dic[now] = new_one;
+            if((*it).size()>min_len)
+                min_len = (*it).size();
         }
-        
-        now = head;
-        new_one = new_head;
-        while(now)
+        for(int i=1; i<=len; i++)
         {
-            int count =0;
-            RandomListNode * temp = now->random;
-            if(temp == NULL)
-                new_one->random = NULL;
-            else
-                new_one ->random = dic[temp];
-            
-            now = now->next;
-            new_one = new_one->next;
+            for(int l=1; l<=min_len; l++)
+            {
+                if(i-l<0)
+                    break;
+                
+                if(dp[i-l])
+                {
+                    string temp = s.substr(i-l, l);
+                    if(wordDict.count(temp))
+                    {
+                        dp[i] = true;
+                        break;
+                    }
+                }
+            }
         }
-        
-        return new_head;
+        return dp[len];
     }
 };
