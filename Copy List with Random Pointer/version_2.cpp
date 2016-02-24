@@ -12,13 +12,16 @@ public:
         if(!head)
             return NULL;
         RandomListNode *now = head;
+        unordered_map<RandomListNode *, RandomListNode*> dic;
         RandomListNode *new_head = new RandomListNode(now->label);
         RandomListNode * new_one = new_head;
+        dic[head] = new_head;
         while(now->next)
         {
             now = now->next;
             new_one ->next = new RandomListNode(now->label);
             new_one = new_one ->next;
+            dic[now] = new_one;
         }
         
         now = head;
@@ -28,25 +31,10 @@ public:
             int count =0;
             RandomListNode * temp = now->random;
             if(temp == NULL)
-            {
                 new_one->random = NULL;
-            }
             else
-            {
-                RandomListNode * start = head;
-                while(start != temp)
-                {
-                    start = start->next;
-                    count++;
-                }
-                RandomListNode * new_start = new_head;
-                while(count)
-                {
-                    count --;
-                    new_start = new_start ->next;
-                }
-                new_one ->random = new_start;
-            }
+                new_one ->random = dic[temp];
+            
             now = now->next;
             new_one = new_one->next;
         }
