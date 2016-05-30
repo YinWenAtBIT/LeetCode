@@ -6,4 +6,6 @@
 写了一个O(n^2)版本的算法， dp[i] = dp[j] +max_one(j+1, i)。利用这个关系，但是超时。
 
 ###版本2
-使用树状数组实现，查询和修改复杂度都为O(lgn)
+记录一个buy一个sell的方法，各有不同含义：使用的第二种方法，详情见如下：
+
+http://bookshadow.com/weblog/2015/11/24/leetcode-best-time-to-buy-and-sell-stock-with-cooldown/
