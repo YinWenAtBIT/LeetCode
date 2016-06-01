@@ -10,8 +10,8 @@ public:
 			int min_now = INT_MAX;
             for(int k=0; k<coins.size(); k++)
             {
-                if(i>coins[k] && dp[i-coins[k] != -1])
-					min_now = min(min_now, dp[i-coins[k] +1]);
+                if(i>=coins[k] && dp[i-coins[k]] != -1)
+					min_now = min(min_now, dp[i-coins[k]]+1);
             }
 			dp[i] = min_now == INT_MAX? -1:min_now;
             
